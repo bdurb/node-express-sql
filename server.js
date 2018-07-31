@@ -3,12 +3,12 @@ const db = require('./data/db.js');
 const cors = require('cors');
 
 const server = express();
-server.use(cors);
+server.use(cors());
 server.use(express.json());
 
 const PORT = 8000
 
-server.get('/posts', (req, res) => {
+server.get('/api/posts', (req, res) => {
   db.find()
   .then(posts => {
     res.json(posts)
