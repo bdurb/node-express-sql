@@ -1,0 +1,10 @@
+
+.post-container {
+    -webkit-box-shadow: 0 7px 4px #777;
+    -moz-box-shadow: 0 7px 4px #777;
+    box-shadow: 0 7px 4px #777;
+    width: 75%;
+    margin: 0 auto;
+    background-color: whitesmoke;
+    opacity: .5;
+  }
