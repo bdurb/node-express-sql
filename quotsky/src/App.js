@@ -11,10 +11,6 @@ class App extends Component {
     }
   }
   componentDidMount() {
-    this.loadPosts()
-  }
-
-  loadPosts = () => {
     axios
         .get("http://localhost:8000/posts")
         .then(response => {
