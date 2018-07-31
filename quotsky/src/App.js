@@ -18,7 +18,7 @@ class App extends Component {
     axios
         .get("http://localhost:8000/posts")
         .then(response => {
-          this.setState({ posts: response.data });
+          this.setState({ posts: response });
         })
         .catch(err => {
           console.log(err);
