@@ -3,8 +3,8 @@ import React from 'react';
 const Post = props => {
   return (
     <div className="postContainer">
-      {props.post.title}
-      {props.post.contents}
+      <h2>{props.post.title}</h2>
+      <p>{props.post.contents}</p>
     </div>
   );
 }
