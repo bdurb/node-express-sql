@@ -53,7 +53,7 @@ server.delete('/posts/:id', (req, res) => {
     if (response !== 1) {
       res.status(404).json({ message: "The post with the specified ID does not exist." })
     } else {
-      res.json(response)
+      res.json(removed)
     }
   })
   .catch(() => {
