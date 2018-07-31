@@ -31,16 +31,19 @@ server.get('/posts/:id', (req, res) => {
   })
 })
 
-// server.post('/posts', (req, res) => {
-//   const post = req.body
-//   if (!post.title || !post.contents) {
-//     res.status(400).json({errorMessage: "Please provide title and contents for the post."})
-//   }
-//   db.insert(post)
-//   .then(post => {
-
-//   })
-// })
+server.post('/posts', (req, res) => {
+  const post = req.body
+  if (!post.title || !post.contents) {
+    res.status(400).json({errorMessage: "Please provide title and contents for the post."})
+  }
+  db.insert(post)
+  .then(post => {
+      res.status(201).json(post)
+  })
+  .catch(() => {
+    res.status(500).json({ error: "There was an error while saving the post to the database" })
+  })
+})
 
 
 
