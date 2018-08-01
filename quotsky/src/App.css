@@ -2,6 +2,7 @@
   background: url('./assets/clouds.jpg');
   background-position: cover;
   text-align: center;
+  height: 100%;
   margin:0;
 }
 

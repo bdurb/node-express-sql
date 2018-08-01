@@ -8,7 +8,7 @@ server.use(express.json());
 
 const PORT = 8000
 
-server.get('/api/posts', (req, res) => {
+server.get('/posts', (req, res) => {
   db.find()
   .then(posts => {
     res.json(posts)
