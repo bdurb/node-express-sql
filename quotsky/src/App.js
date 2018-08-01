@@ -28,6 +28,7 @@ class App extends Component {
     this.setState({ [e.target.name]: e.target.value})
   }
 
+
   handleSubmit = () => {
     axios
       .post("http://localhost:8000/posts", {
@@ -60,7 +61,7 @@ class App extends Component {
         value={this.state.contents}
         onChange={this.handleInputChange}
         />
-        <button onClick={this.handleSubmit()}>Submit!</button>
+        <button onClick={() => this.handleSubmit()}>Submit!</button>
         {this.state.posts.map(post => (
           <Post key={post.id} post={post} />
         ))}
