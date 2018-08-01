@@ -28,7 +28,6 @@ class App extends Component {
     this.setState({ [e.target.name]: e.target.value})
   }
 
-
   handleSubmit = () => {
     axios
       .post("http://localhost:8000/posts", {
@@ -36,12 +35,14 @@ class App extends Component {
         contents: this.state.contents
       })
       .then(res => {
-        this.setState({...this.state.posts, res})
+        const posts = this.state.posts.slice()
+        posts.push(res)
+        this.setState({title: '', contents: ''})
       })
       .catch(err => {
         console.log(err)
       })
-  }
+    }
 
   render() {
     return (
